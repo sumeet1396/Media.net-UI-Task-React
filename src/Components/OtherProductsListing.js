@@ -2,6 +2,8 @@ import React from "react";
 import Cards from "./Cards";
 import {OTHER_PRODUCTS_LIST} from '../constants'
 
+const CLASS = 'interested-card-container card-container hover-2';
+
 const OtherProductsListing = () => {
     return (
         <div className="other-products-container">
@@ -9,7 +11,7 @@ const OtherProductsListing = () => {
                 <span className="related-topic">You may also be interested in:</span>
                 <div className="other-product">
                     <div className="other-product-listing flex card-grid-3">
-                        {OTHER_PRODUCTS_LIST.map(product =><Cards key={product?.title} card={product} type={'others'}/>) }
+                        {OTHER_PRODUCTS_LIST.map(product =><Cards key={product?.title} card={product} type={'others'} cssClass={CLASS}/>) }
                     </div>
                     <span className="add-text right-text">Ads</span>
                 </div>

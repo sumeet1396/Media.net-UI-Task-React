@@ -5,7 +5,7 @@ const Header = () => {
         <header>
             <div className="wrapper">
                 <h1>
-                    <a href="index.html" title="CreditCardsToday">
+                    <a href="#" title="CreditCardsToday">
                         <img src="https://placehold.co/415x103" />
                     </a>
                 </h1>

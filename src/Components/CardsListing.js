@@ -9,6 +9,9 @@ import {
     ADS 
 } from '../constants';
 
+const CLASS1 = 'card-container hover-1';
+const CLASS2 = 'card-container col col-6 hover-1';
+
 const CardsListing = () => {
     return (
         <section className="card-section">
@@ -20,10 +23,10 @@ const CardsListing = () => {
                 <div className="card-listing-container">
                     <span className="add-text">{RELATED_AD_TOPICS}</span>
                     <div className="card-grid-1">
-                        {CARDS_LIST_WITH_IMAGE.map(card => <Cards key={card?.title} card={card} type={'cards'}/>)}
+                        {CARDS_LIST_WITH_IMAGE.map(card => <Cards key={card?.title} card={card} type={'cards'} cssClass={CLASS1} />)}
                     </div>
                     <div className="card-grid-2">
-                        {CARDS_LIST_WITHOUT_IMAGE.map(card => <Cards key={card?.title} card={card} type={'cards'}/>)}
+                        {CARDS_LIST_WITHOUT_IMAGE.map(card => <Cards key={card?.title} card={card} type={'cards'} cssClass={CLASS2} />)}
                     </div>
                     <span className="add-text right-text">{ADS}</span>
                 </div>

@@ -1,11 +1,15 @@
 import React from "react";
 
 const Cards = (props) => {
-    const { card, type = "cards" } = props;
+    const { card, type = "cards", cssClass } = props;
     
     return (
-        <div className={card?.class}>
-            {card?.url && type === "cards" ? <img src={card?.url} alt={card?.title}/> : null}
+        <div className={cssClass}>
+            {card?.url && type === "cards" ? 
+            (   <figure>
+                    <img src={card?.url} alt={card?.title}/> 
+                </figure>
+             ): null}
             <div className="card-content">
                 <a href="#" title={card?.title}>
                     <h3>{card?.title}</h3>
@@ -14,7 +18,12 @@ const Cards = (props) => {
                     </svg>
                 </a>
             </div>
-            {card?.url && type === "others" ? <img src={card?.url} alt={card?.title}/>: null}
+            {card?.url && type === "others" ? 
+            (    
+                <figure>
+                    <img src={card?.url} alt={card?.title}/>
+                </figure>
+            ): null}
         </div>
     )
 }
